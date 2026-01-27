@@ -10,11 +10,11 @@
                 }
               };
 
-              let userCopy={...user}
-              userCopy.name="Raju"
-              userCopy.preferences.theme="light"
+              let userCopy={...user}  //Creating a shallow copy of user
+              userCopy.name="Raju"    //Changing name in the copied object
+              userCopy.preferences.theme="light"  //Changing preferences.theme in the copied object
 
-              console.log(user,userCopy)
+              console.log(user,userCopy)  //.Log both original and copied objects
 /*
 🎯 Task
     1. Create a shallow copy of user
