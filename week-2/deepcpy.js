@@ -17,12 +17,12 @@
                   ]
                 };
 
-                orderCopy=structuredClone(order)
+                orderCopy=structuredClone(order)  //Creating a deep copy of order
 
-                orderCopy.customer.address.city="Karimnagar"
-                orderCopy.items[0].price=9000
+                orderCopy.customer.address.city="Karimnagar"   //Modifying customer.address.city in copied object
+                orderCopy.items[0].price=9000   //Modifying items[0].price in copied object
 
-                console.log(order,orderCopy)
+                console.log(order,orderCopy)  //Verify original object remains unchanged
 /*
 
 🎯 Task:
