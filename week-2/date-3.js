@@ -2,12 +2,13 @@
 -------------------------------------------
 Input:*/
 let dob = "2000-05-15"
-let date=new Date(dob)
+let date=new Date(dob)  //Creatinng date obj for dob 
 let today=new Date()
-let age=today.getFullYear()-date.getFullYear()
-if(today.getMonth()<=date.getMonth()){
-    age=age-1
-    console.log(age)
+let age=today.getFullYear()-date.getFullYear()  //Calculating age
+if(today.getMonth()<date.getMonth()||
+    (today.getMonth()===date.getMonth()&&today.getDate()<date.getDate())){  //Checking birth month and date to calculate proper age
+        age=age-1
+        console.log(age)
 }
 else{
 console.log(age)

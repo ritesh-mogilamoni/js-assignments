@@ -2,34 +2,32 @@
 --------------------------------------------------------------------
 
  Given:*/
-      let enrollmentDeadline = new Date("2026-01-20");
-    //console.log(new Date())
-      if(enrollmentDeadline>=Date.now()){
-        console.log("Enrollment Open")
+let enrollmentDeadline = new Date("2026-02-20");
 
-      }
-      else{
-        console.log("Enrollment Closed")
-      }
-
-let year = 2026;
-let month=1;
-let day=30;
-
-let inputDate=new Date(year,month,day)
-
-
-if(inputDate.getFullYear()===year &&
-  inputDate.getMonth()===month &&
-  inputDate.getDate()===day) {
-    console.log("Valid")
-    } 
-else {
-  console.log("Invalid")
+if(enrollmentDeadline>=new Date()){   //Checking if today is before deadline 
+  console.log("Enrollment Open")    //if today is before deadline, "Enrollment Open" is printed
+}
+else{
+  console.log("Enrollment Closed")  //if today is after deadline, "Enrollment Closed" is printed
 }
 
+let input="2026-02-30"
+let splittedDate=input.split("-")   // Split input string
 
-      
+let year=Number(splittedDate[0])    //String is converted to number
+let month=Number(splittedDate[1])   //String is converted to number
+let day=Number(splittedDate[2])     //String is converted to number
+
+let date=new Date(input)
+
+// Check if Date is valid or invalid
+if(
+  date.getFullYear()===year&&date.getMonth()+1===month&&date.getDate()===day){
+  console.log("Date is Valid")}
+else{
+  console.log("Date is Invalid")
+}
+
 
 /*Tasks:
   1.Check if:

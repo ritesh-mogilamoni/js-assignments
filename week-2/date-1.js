@@ -12,11 +12,12 @@ Tasks:
       3. Display the date in this format:
                     DD-MM-YYYY HH:mm:ss*/
 
-let date=new Date()
-console.log(date.getFullYear())
+let date=new Date()  //Create a Date object for current date & time.
+console.log("Year:",date.getFullYear())   //Extract and display Year
+console.log("Month:",date.getMonth()+1)   //Extract and display Month
+console.log("Date:",date.getDate())       //Extract and display Date
+console.log("Day:",date.getDay()+1)       //Extract and display Day of week
+console.log("Hours:",date.getHours(),"Minutes:",date.getMinutes(),"Seconds:",date.getSeconds())   //Extract and display Hours, minutes, seconds
 
-console.log(date.getMonth()+1)
-console.log(date)
-console.log(date.getDay())
-console.log(date.getHours(),date.getMinutes(),date.getSeconds())
-console.log(date)
+//Display the date in this format:DD-MM-YYYY HH:mm:ss
+console.log("DD-MM-YYYY HH:mm:ss :",date.getDate(),"-",date.getMonth()+1,"-",date.getFullYear()," ",date.getHours(),":",date.getMinutes(),":",date.getSeconds())
