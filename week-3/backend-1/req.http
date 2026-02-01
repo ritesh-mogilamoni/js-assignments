@@ -1,0 +1,74 @@
+GET http://127.0.0.1:7890/user-api/users
+
+###
+POST http://127.0.0.1:7890/user-api/users
+Content-Type:  application/json
+
+{
+    "id":100,
+    "name":"ravi",
+    "age":20
+}
+
+###
+PUT http://127.0.0.1:7890/user-api/users/id
+Content-Type:  application/json
+
+{
+    "id":100,
+    "name":"ravi kumar",
+    "age":20
+}
+
+###
+GET http://localhost:7890/user-api/users/100
+
+
+
+
+###
+DELETE  http://127.0.0.1:7890/user-api/users/100
+
+
+
+###
+GET http://127.0.0.1:7890/product-api/products
+
+###
+GET http://127.0.0.1:7890/product-api/products-brand/boAt
+
+###
+GET http://127.0.0.1:7890/product-api/products-id/901
+
+###
+POST http://127.0.0.1:7890/product-api/products
+Content-Type:  application/json
+
+{
+    "productId":901,
+    "name":"Headphones",
+    "price":2000,
+    "brand":"boAt"
+}
+
+###
+PUT http://127.0.0.1:7890/product-api/products/901
+Content-Type:  application/json
+
+{
+    "productId":901,
+    "name":"SmartWatch",
+    "price":2000,
+    "brand":"boAt"
+}
+
+###
+#GET http://localhost:7890/users/100
+
+
+
+
+###
+DELETE  http://127.0.0.1:7890/product-api/products/901
+
+

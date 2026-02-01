@@ -1,0 +1,30 @@
+import { Schema,model } from "mongoose";
+
+
+//Create user schema
+const userSchema=new Schema({
+    username:{
+        type:String,
+        required:[true,"Username is required"],
+        minLength:[4,"Minimum length should be of 4 characters"],
+        maxLength:[8,"Max length exceeded"]
+    },
+    password:{
+        type:String,
+        required:[true,"Password is required"]
+    },
+    age:{
+        type:Number,
+        required:[true,"Age is required"],
+        min:[18,"Age should be above 18"],
+        max:[25,"Age should be less than 18"]
+
+    }},
+  {
+    strict: "throw",
+    timestamps: true
+  }
+)
+
+//Create user model with that schema
+export const UserModel=model('user',userSchema)     //mongoose creates the collection in plural form,here user is created as users by mongoose
