@@ -1,0 +1,29 @@
+###insert product
+POST http://localhost:2000/productapi/products
+Content-Type: application/json
+
+{
+    "productName":"PowerBank",
+    "price":3000,
+    "brand":"boAt"
+}
+
+###get products
+GET http://localhost:2000/productapi/products
+
+###create user
+POST http://localhost:2000/userapi/users
+Content-Type: application/json
+
+{
+    "name":"vikas",
+    "email":"abcd@gmail.com",
+    "password":"vikas",
+    "cart":[]
+}
+
+###Req to add prod to cart
+PUT http://localhost:2000/userapi/user-cart/user-id/69809ce1b01c12ff9da47cdc/product-id/698069a77196d468bbb69f21
+
+###read user by id
+GET http://localhost:2000/userapi/users/69809ce1b01c12ff9da47cdc
