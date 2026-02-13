@@ -1,0 +1,72 @@
+###Read all users
+GET http://localhost:4000/user-api/users
+
+###Read user by object id
+GET http://localhost:4000/user-api/users/697dbb262d534cc51da6df39
+
+
+###Create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"aryan",
+    "password":"12555",
+    "age":21
+}
+
+###Update user
+PUT http://localhost:4000/user-api/users/697dc00c562907893a95c908
+Content-Type: application/json
+
+{
+    "username":"aryan",
+    "password":"12555",
+    "age":19
+}
+
+###Delete user
+DELETE http://localhost:4000/user-api/users/697dc00c562907893a95c908
+
+
+
+###PRODUCT API
+
+GET http://localhost:4000/prod-api/products
+
+###
+GET http://localhost:4000/prod-api/products/697dced01cb3d56b9eb08056
+
+###
+PUT http://localhost:4000/prod-api/products/697dced01cb3d56b9eb08056
+Content-Type: application/json
+
+{
+    "productName":"noise SmartWatch",
+    "pid":105,
+    "price":2800
+}
+
+###
+POST http://localhost:4000/prod-api/products
+Content-Type: application/json
+
+{
+    "productName":"boAt Headphones",
+    "pid":102,
+    "price":1990
+}
+
+###User authentication(login) req
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"aryan",
+    "password":"12555"
+}
+
+
+###
+
+GET http://localhost:4000/user-api/test
